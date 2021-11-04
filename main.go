@@ -41,8 +41,7 @@ func (s *Session) Data(r io.Reader) error {
 	if b, err := ioutil.ReadAll(r); err != nil {
 		return err
 	} else {
-
-		log.Println("Data:", string(b))
+		StoreImages(string(b))
 	}
 	return nil
 }
